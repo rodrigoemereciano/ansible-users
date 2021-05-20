@@ -1,8 +1,8 @@
 ---
 # Task para criar usuarios
-- name: criar usuario esig e adicionar ao grupo de sudo.
+- name: criar usuario infra e adicionar ao grupo de sudo.
   ansible.builtin.user:
-    name: operacional
+    name: infra
     password: "{{ 'novasenha' | password_hash('sha512') }}"
     shell: /bin/bash
     groups: sudo
