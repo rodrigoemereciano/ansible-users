@@ -1,0 +1,9 @@
+--- 
+- name: criacao de usuarios
+  hosts: maquinetas
+  remote_user: ansible
+  become: yes
+
+  roles:
+    - role: create-users
+  

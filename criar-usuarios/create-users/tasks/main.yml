@@ -1,0 +1,11 @@
+---
+# Task para criar usuarios
+- name: criar usuario esig e adicionar ao grupo de sudo.
+  ansible.builtin.user:
+    name: operacional
+    password: "{{ 'novasenha' | password_hash('sha512') }}"
+    shell: /bin/bash
+    groups: sudo
+    append: yes
+
+
